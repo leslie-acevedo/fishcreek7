@@ -63,6 +63,15 @@ font-size: 1.1em;
 font-family: Georgia, "Times New Roman", serif; 
 font-weight: bold; 
 }
+table { 
+margin: 1em; 
+border: 2px solid #000033; 
+border-collapse: collapse; 
+}
+td, th { 
+padding: 0.5em;
+border: 1px solid #000033;
+}
 section { 
 background-color: #EAEAEA;
 margin-bottom: 1em;
