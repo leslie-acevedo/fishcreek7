@@ -100,7 +100,61 @@ font-size: .70em;
 font-style: italic;
 padding: 1em;
 text-align: center;
+} form { 
+display: flex;
+flex-direction: column;
+padding-left: 1em; width: 80%; 
 }
+input, textarea { margin-bottom: .5em; }
+@media (min-width: 600px) { 
+header { background-image: url(bigfish.gif); }
+h1 { font-size: 3em; }
+nav ul { flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-around; }
+nav li { border-bottom: none; }
+#flow { 
+display: flex;
+flex-flow: row wrap; 
+}
+section { 
+flex: 1; 
+min-width: 30%; 
+}
+dl { flex: 2; }
+img { flex: 1; }
+#mobile  { display: none; }
+#desktop { display: inline; }
+form { 
+width: 40%;
+display: grid;
+grid-gap: 1em; gap: 1em;
+grid-template-columns: 6em 1fr; }
+input[type="submit"] { 
+grid-column: 2 / 3;
+width: 9em; }		
+label { text-align: right; }
+}
+@media (min-width: 1024px) { 
+@supports (display: grid) {
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+#wrapper { 
+display: grid; 
+grid-template:
+"header header"
+"nav main"
+"footer footer" 
+/ 180px ; 
+}
+nav ul { 
+flex-direction: column;
+font-weight: bold;
+font-size: 1.25em; }
+}
+} /* MAKE SURE YOU HAVE THE TWO BRACES */
 @media (min-wdith: 600px) {
  header {background-image: url(bigfish.gif); }
  h1 { font-size: 3em; }
